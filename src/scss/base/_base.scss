@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //note: this sets font to a base 10px. Derived from 10/16=.625 * 100= 62.5%
+  //means you can set font by rem so 2rem is equal to 20px;
+  font-size: 50%;
+  @include respond(tab-port) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-land) {
+    font-size: 62.5%;
+  }
+}
+
+//note that font info for body is in typography
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: $color-white;
+}
+//selector indicates when you highlight text.
+::selection {
+  background-color: $color-white;
+  color: $color-blue-main;
+  text-shadow: none;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  font-weight: 700;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: disc;
+}

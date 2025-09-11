@@ -1,0 +1,66 @@
+//sass variables. Need to declare with the $.
+
+//colors
+$color-primary-dark: #003284;
+$color-primary-medium-dark: #004f8e;
+$color-primary-medium: #007a95;
+$color-primary-light: #008599;
+$color-primary-border-main: #3d7f8b;
+$color-primary-border-inner: #007582;
+
+$color-secondary-dark: #8c3600;
+$color-secondary-medium-dark: #8c5e00;
+$color-secondary-medium: #8c7500;
+$color-secondary-light: #8c8a00;
+$color-secondary-border-main: #fff1d1;
+$color-secondary-border-inner: #d67400;
+
+$color-primary: #0045d1;
+$color-primary-light: #0078ee;
+$color-primary-neutral: #0066ff;
+
+$color-blue-main: #2c2f9a;
+
+$color-gold: #ffe600;
+$color-gold-dark: #c6b474;
+$color-gold-light: #fbf9ca;
+$color-orange: #f4b840;
+
+$color-secondary: #30e53b;
+// $color-secondary-light: #32eb36;
+// $color-secondary-dark: #22a334;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-dark: #242424;
+$color-light: #c2c2c2;
+
+$color-primary-chart: #ffe862;
+$color-primary-chart-light: #ffff93;
+$color-primary-chart-medium: #f1d532;
+
+$color-button-red: #f92b2b;
+$color-button-burgandy: #9f2e37;
+$color-button-gold: #ffd100;
+
+$color-grey-dark: #2f2f2f;
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+$color-grey-light-1: #c2c2c2;
+$color-grey-light-2: #bbb;
+
+//font
+$default-font-size: 1.6rem;
+
+//grid
+$grid-width: 192rem;
+$grid-width-medium: 120rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+$color-gradient-dark: #faa636;
+$color-gradient-light: #fff9b3;
+$color-gradient-shadow: #223d84;

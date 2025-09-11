@@ -1,0 +1,191 @@
+.custom__select__wrapper {
+  width: 90%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto;
+  flex: auto;
+  position: relative;
+
+  & aside {
+    width: 100%;
+
+    @include respond(phone) {
+      width: 65%;
+    }
+  }
+  @include respond(phone) {
+    align-items: flex-start;
+  }
+}
+
+.custom__select {
+  position: relative;
+  font-size: 1.15rem;
+  color: #000;
+  width: 100%;
+
+  &__button {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,
+      rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__value {
+    text-align: left;
+  }
+
+  &__arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #000;
+    transition: transform ease-in-out 0.3s;
+  }
+
+  &__dropdown {
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,
+      rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 0.3rem;
+    transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+    transform: translateY(0.5rem);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+
+    &:focus-within {
+      box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
+    }
+
+    & li {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    & li label {
+      width: 100%;
+      padding: 8px 10px;
+      cursor: pointer;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 25px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 25px;
+    }
+
+    & li:hover,
+    & input:checked ~ label {
+      background-color: #f2f2f2;
+    }
+
+    & input:focus ~ label {
+      background-color: #dfdfdf;
+    }
+
+    & input[type='radio'] {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+    }
+  }
+
+  &.active .custom__select__arrow {
+    transform: rotate(180deg);
+  }
+
+  &.active .custom__select__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0rem);
+  }
+
+  &__purchase__button {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #000, 0 0 10px #000;
+    background-color: red;
+    border: 1px solid #fff;
+    position: relative;
+
+    @include respond(phone) {
+      position: absolute;
+      right: 0px;
+    }
+
+    & a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      padding: 18px 20px;
+    }
+
+    &__hidden {
+      display: none;
+    }
+
+    &--disabled {
+      background-color: lightgray;
+    }
+
+    &__comingsoon {
+      left: 50%;
+      position: absolute;
+      top: 120%;
+      transform: translate(-50%);
+      width: 100%;
+    }
+  }
+  & .hidden {
+    display: none;
+  }
+}
+
+aside.platform,
+aside.retailers {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  margin-top: 3rem;
+  flex-direction: column;
+  row-gap: 2rem;
+  flex: auto;
+
+  &__hidden {
+    display: none;
+  }
+
+  @include respond(phone) {
+    flex-direction: row;
+  }
+}

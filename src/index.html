@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test</title>
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/oqh6ihm.css"> -->
+
+    <link href="@styles/main.scss" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="@scripts/modernizr.js" defer="defer"></script>
+    <script src="@scripts/siema.min.js" defer="defer"></script>
+    <script src="@scripts/index.js" defer="defer"></script>
+  </head>
+  <body>
+    <header class="navigation">
+      <div class="navigation__platformgroup">
+        <a href="https://www.nintendo.com/us/switch/" target="_blank">
+          <img
+            class=""
+            src="./img/nav/ns_logo.svg"
+            alt="Nintendo Switch Logo"
+          />
+        </a>
+        <a href="https://store.playstation.com/en-us/" target="_blank">
+          <img class="" src="./img/nav/ps5_logo.svg" alt="PlayStation 5 Logo" />
+        </a>
+        <a href="https://store.steampowered.com/" target="_blank">
+          <img class="" src="./img/nav/steam_logo.svg" alt="Steam Logo" />
+        </a>
+      </div>
+      <!-- hamburger button setup -->
+      <input
+        type="checkbox"
+        class="navigation__checkbox"
+        id="navi-toggle--main"
+      />
+      <label for="navi-toggle--main" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__active">
+            <a href="./index.html" class="navigation__link"
+              ><div class="navigation__text">Home</div></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="./story.html" class="navigation__link"
+              ><div class="navigation__text">Story</div></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="./characters.html" class="navigation__link"
+              ><div class="navigation__text">Characters</div></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="./gameplay.html" class="navigation__link"
+              ><div class="navigation__text">Gameplay</div></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="./videos.html" class="navigation__link"
+              ><div class="navigation__text">Videos</div></a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="./products.html" class="navigation__link"
+              ><div class="navigation__text">Products</div></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main></main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__logosGroup">
+        <img
+          class="footer__logoImg footer__logoImg--firstpartyLogo"
+          src="./img/footer/nintendoswitch_logo.svg"
+          alt="Nintendo Switch"
+        />
+        <img
+          class="footer__logoImg footer__logoImg--firstpartyLogo"
+          src="./img/footer/PS5_PS4_Logo_white.png"
+          alt="PlayStation 5 and Playstation 4 Logo"
+        />
+        <img
+          class="footer__logoImg footer__logoImg--steamLogo"
+          src="./img/footer/steam_logo.svg"
+          alt="steam"
+        />
+      </div>
+      <div class="footer__logosGroup">
+        <img
+          class="footer__logoImg"
+          src="./img/footer/esrb_rp.svg"
+          alt="Video Games Rating Pending"
+        />
+      </div>
+      <p class="footer__copy">
+        Nintendo Switch is a trademark of Nintendo.<br /><br />
+        ©2024 Sony Interactive Entertainment LLC. “PlayStation Family Mark,”
+        “PlayStation,” “PS5 logo” and “PS5” are registered trademarks or
+        trademarks of Sony Interactive Entertainment Inc.<br /><br />
+        ©2024 Valve Corporation. Steam and Steam logo are trademarks and/or
+        registered trademarks of Valve Corporation in the U.S. and/or other
+        countries.<br /><br />
+        The ESRB rating icons are registered trademarks of the Entertainment
+        Software Association.
+      </p>
+    </footer>
+  </body>
+</html>
