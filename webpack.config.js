@@ -1,9 +1,13 @@
+//  NOTE did not add in eslint in package.json. if seems necessary look at past project like sonic
+
 const path = require('path');
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'development', //change to production for builds (development otherwise)
 
+  // change to source-map for production (eval otherwise)
+  devtool: 'eval',
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
@@ -30,7 +34,6 @@ module.exports = {
       // define templates here
       entry: {
         index: 'src/index.html', // => dist/index.html
-        products: 'src/products.html', // => dist/about.html
       },
       js: {
         // output filename of compiled JavaScript
@@ -39,6 +42,16 @@ module.exports = {
       css: {
         // output filename of extracted CSS
         filename: 'css/[name].[contenthash:8].css',
+      },
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
+        minifyCSS: true,
+        minifyJS: true,
       },
     }),
   ],
@@ -57,16 +70,16 @@ module.exports = {
       },
       {
         test: /\.(s?css)$/,
-        // use: ['css-loader', 'postcss-loader', 'sass-loader'],
-        use: [
-          { loader: 'css-loader', options: { sourceMap: true } },
-          { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } },
-        ],
+        use: ['css-loader', 'postcss-loader', 'sass-loader'],
+        // use: [
+        //   { loader: 'css-loader', options: { sourceMap: true } },
+        //   { loader: 'postcss-loader', options: { sourceMap: true } },
+        //   { loader: 'sass-loader', options: { sourceMap: true } },
+        // ],
       },
       {
         test: /\.(ico|png|jp?g|svg|gif|webp)/,
-        type: 'asset',
+        type: 'asset/resource',
         // generator: {
         //   filename: 'img/[name].[hash:8][ext]',
         // },
@@ -80,6 +93,14 @@ module.exports = {
         test: /\.(woff|woff2)$/,
         use: {
           loader: 'url-loader',
+        },
+      },
+      {
+        // New rule for handling MP4 files
+        test: /\.mp4$/,
+        type: 'asset/resource', // Use asset/resource for MP4 files
+        generator: {
+          filename: 'media/[name].[contenthash:8][ext]', // Define output path for media files
         },
       },
     ],
