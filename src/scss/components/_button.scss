@@ -1,0 +1,16 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  border-radius: 3px;
+  background-color: $color-button;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  &:hover {
+    box-shadow: 4px 4px 10px rgba($color-black, 40%);
+  }
+  &:active {
+    border: 1px solid $color-white;
+  }
+}

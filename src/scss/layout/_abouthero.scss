@@ -1,0 +1,40 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+
+  @include respond(tab-port) {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  &__content {
+    width: 95%;
+    max-width: 55rem;
+    text-align: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0 0 3rem;
+
+    @include respond(tab-port) {
+      flex: 1 1 60%;
+      margin-left: 1rem;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 95%;
+    max-width: 55rem;
+    margin: 0 auto;
+    align-self: flex-end;
+
+    @include respond(tab-port) {
+      height: 100%;
+      object-fit: cover;
+      max-width: 45rem;
+    }
+  }
+}

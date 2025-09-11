@@ -1,51 +1,56 @@
 //can be dropped into any bit of code to add this rather than having to repeat the code over and over.
 @mixin absCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
   }
-  
-  @mixin clearfix {
-    &::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
-  }
-  
-  @mixin backgroundGradient {
-    background: linear-gradient(to bottom, $color-primary, $color-secondary);
-    position: relative;
-  }
-  
-  // breakpoints are set up in 'em' to derive a breakpoint you would like divide the number by 16 to get the em value. In order to reduce code also
-  // created a mixin that accepts a variable and, the variable is then checked with an if statemeent to find out if they match. If they do then the correct
-  // media query will be called. @content puts the code in the correct location.
-  @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-      @media only screen and (min-width: 37.5em) {
-        //600/16
-        @content;
-      }
-    }
-    @if $breakpoint == tab-port {
-      @media only screen and (min-width: 56.25em) {
-        //900/16
-        @content;
-      }
-    }
-    @if $breakpoint == tab-land {
-      @media only screen and (min-width: 75em) {
-        //1200/16
-        @content;
-      }
-    }
-    @if $breakpoint == big-desktop {
-      @media only screen and (min-width: 112.5em) {
-        //1800/16
-        @content;
-      }
+}
+
+@mixin backgroundGradient {
+  background: linear-gradient(to bottom, $color-primary, $color-secondary);
+  position: relative;
+}
+
+// breakpoints are set up in 'em' to derive a breakpoint you would like divide the number by 16 to get the em value. In order to reduce code also
+// created a mixin that accepts a variable and, the variable is then checked with an if statemeent to find out if they match. If they do then the correct
+// media query will be called. @content puts the code in the correct location.
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (min-width: 37.5em) {
+      //600/16
+      @content;
     }
   }
-  
+  @if $breakpoint == tab-port {
+    @media only screen and (min-width: 56.25em) {
+      //900/16
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port-lg {
+    @media only screen and (min-width: 67.5em) {
+      //1080/16
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (min-width: 75em) {
+      //1200/16
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      //1800/16
+      @content;
+    }
+  }
+}

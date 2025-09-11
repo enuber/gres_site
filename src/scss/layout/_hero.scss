@@ -1,0 +1,53 @@
+.hero {
+  background-color: $color-primary-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(tab-port) {
+    flex-direction: row;
+    padding-top: 9rem;
+  }
+
+  &__content {
+    width: 95%;
+    max-width: 40rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 3rem 0;
+
+    h3 {
+      width: 100%;
+      margin: 0 auto;
+
+      @include respond(phone) {
+        width: 90%;
+      }
+    }
+
+    @include respond(phone) {
+      max-width: 60rem;
+    }
+
+    @include respond(tab-port) {
+      flex: 1 1 60%;
+      order: 1;
+      margin-right: 1rem;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    max-width: 55rem;
+    align-self: flex-end;
+
+    @include respond(tab-port) {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
