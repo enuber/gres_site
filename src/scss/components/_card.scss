@@ -1,0 +1,23 @@
+.card {
+  background-color: $color-white;
+  width: 90%;
+  max-width: 30rem;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    height: 13rem;
+  }
+
+  & ul {
+    align-self: flex-start;
+    text-align: left;
+    text-align: left;
+    font-size: 1.8rem;
+    padding-left: 2.75rem;
+  }
+}
