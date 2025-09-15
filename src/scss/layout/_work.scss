@@ -1,0 +1,56 @@
+.work {
+  width: 100%;
+  text-align: center;
+
+  &__container {
+    width: 95%;
+    margin: 3rem auto;
+  }
+
+  &__group {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-primary-light-2;
+    margin: 3rem auto;
+    max-width: 50rem;
+
+    & img {
+      width: 100%;
+      display: block;
+      height: auto;
+      object-fit: cover;
+
+      @include respond(tab-port) {
+        width: 50%;
+        height: 100%;
+      }
+    }
+
+    @include respond(tab-port) {
+      flex-direction: row;
+      align-items: center;
+      max-width: 120rem;
+      height: 37.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: $color-white;
+    margin: 2rem auto;
+
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+
+      & img {
+        width: 20px;
+      }
+    }
+  }
+}
