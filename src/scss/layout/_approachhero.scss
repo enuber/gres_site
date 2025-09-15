@@ -1,0 +1,83 @@
+.approach {
+  border-left: 1rem solid $color-primary-medium;
+  border-bottom: 1rem solid $color-primary-medium;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    @include respond(tab-port) {
+      width: 95%;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    width: 95%;
+    margin: 3rem auto;
+    max-width: 50rem;
+  }
+  &__bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    &__section {
+      display: flex;
+      align-items: flex-start;
+      gap: 3rem;
+
+      &__number {
+        display: flex;
+        border-radius: 50%;
+        border: 4.5px solid red;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1 /1;
+        flex-shrink: 0;
+
+        &--yellow {
+          border-color: $color-secondary;
+        }
+        &--grey {
+          border-color: $color-secondary-medium;
+        }
+        &--burgandy {
+          border-color: $color-button;
+        }
+      }
+
+      aside {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h2 {
+          display: inline;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 8rem; // underline width
+            height: 2px; // thickness
+            background: black;
+            margin-top: 4px; // space from text
+          }
+        }
+      }
+    }
+  }
+
+  & img {
+    width: 95%;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}
