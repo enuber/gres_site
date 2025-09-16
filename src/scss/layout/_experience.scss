@@ -1,0 +1,30 @@
+.experience {
+  width: 95%;
+  max-width: 120rem;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto;
+
+  @include respond(tab-port) {
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  &__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond(tab-port) {
+      width: 50%;
+      max-width: 50rem;
+    }
+  }
+
+  & img {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}
