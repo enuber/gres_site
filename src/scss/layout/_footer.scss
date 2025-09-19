@@ -1,192 +1,35 @@
 .footer {
   background-color: $color-dark;
+  color: $color-white;
   padding: 0 0 4rem;
   font-size: 1.2rem;
   overflow: hidden;
   position: relative;
   z-index: 1;
+  text-align: center;
+  padding-top: 4rem;
 
-  &__topBar {
-    margin: 0 auto;
-    max-width: 90rem;
-    position: relative;
-    text-align: center;
-  }
-
-  %whiteBoxInfo {
-    background-color: $color-white;
-    height: 6rem;
-    width: 100%;
-
-    @include respond(phone) {
-      display: inline-block;
-      height: 7.5rem;
-      right: 60%;
-    }
-
-    @include respond(tab-port) {
-      right: 70%;
-    }
-  }
-
-  &__whiteFiller {
-    @extend %whiteBoxInfo;
-    position: absolute;
-    right: 70%;
-  }
-
-  %footerGroups {
-    margin: 0 auto;
-    max-width: 32rem;
-    text-align: center;
-  }
-
-  &__socialGroup {
-    @extend %footerGroups;
-
-    @include respond(phone) {
-      left: 48%;
-      position: absolute;
-      top: 9px;
-    }
-
-    @include respond(tab-port) {
-      left: 38%;
-      top: 1.5rem;
-    }
-  }
-
-  &__newsletterGroup {
-    @extend %footerGroups;
-
-    @include respond(tab-port) {
-      height: 4.5rem;
-      left: 72%;
-      position: absolute;
-      top: 1.5rem;
-      width: 26%;
-    }
-  }
-
-  &__socialIcons {
-    width: 100%;
-
-    & li {
-      display: inline-block;
-      margin: 2.5rem 1.68% 0 0;
-      max-width: 5.7rem;
-      width: 17.5%;
-
-      @include respond(phone) {
-        margin-top: 0;
-      }
-
-      @include respond(tab-port) {
-        max-width: 4.5rem;
-      }
-    }
-    & li:last-child {
-      margin-right: 0;
-    }
-    & li img {
-      width: 100%;
-    }
-  }
-
-  &__newsletterButton {
-    background-color: $color-white;
-    display: inline-block;
-    color: $color-dark;
-    cursor: pointer;
-    margin: 2rem auto 0;
-    max-width: 27.5rem;
-    padding: 1.5rem 1.05rem;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-    font-weight: 700;
-
-    @include respond(tab-port) {
-      margin: 0 auto;
-      padding: 1.05rem 0;
-      width: 100%;
-    }
-  }
-
-  &__logosGroup {
+  &__group {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    flex-basis: auto;
-    padding: 2.5rem 0;
-    align-content: center;
 
-    & > *:not(:last-child) {
-      margin-right: 2rem;
+    @include respond(tab-port) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 5rem;
     }
 
-    @include respond(phone) {
-      padding: 1.5rem 0;
+    &__item {
+      width: 30rem;
     }
   }
 
-  &__logoImg {
-    display: flex;
-    margin: 1rem;
-    height: 7.5rem;
-
-    &--segaLogo {
-      height: 5rem;
-    }
-    &--sonicLogo {
-      height: 5rem;
-    }
-    &--firstpartyLogo {
-      height: 3.2rem;
-    }
-    &--steamLogo {
-      height: 4.5rem;
-    }
-    &--whiteborder {
-      border: 2px solid $color-white;
-    }
-  }
-
-  &__copy {
-    color: $color-white;
-    font-size: 1.2rem;
-    margin: 0 auto;
-    max-width: 90rem;
-    padding-bottom: 1.5rem;
-    text-align: center;
-    width: 95%;
-    text-shadow: none;
-  }
-
-  %policyInfo {
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 1.85;
-    padding: 1.5rem 0;
-    width: 90%;
-    max-width: 100rem;
-    margin: 0 auto;
-  }
-
-  &__policyGroup {
-    @extend %policyInfo;
-    padding: 0 0 8px;
-  }
-
-  &__policyGroup a {
-    @extend %policyInfo;
-    margin: 0 1rem;
-    padding: 0;
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    outline: none;
-    text-decoration: none;
-    color: $color-white;
+  &__social {
+    width: 4rem;
+    height: 4rem;
+    margin: 3rem auto;
   }
 }

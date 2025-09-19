@@ -1,0 +1,36 @@
+.connect {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 120rem;
+  gap: 2rem;
+
+  @include respond(tab-port) {
+    flex-direction: row;
+    gap: 6rem;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 1;
+    max-width: none;
+
+    @include respond(tab-port) {
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+}

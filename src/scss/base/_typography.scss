@@ -29,6 +29,13 @@ p {
   text-shadow: none;
   z-index: 1;
   position: relative;
+
+  &--brown {
+    color: $color-secondary;
+  }
+  &--white {
+    color: $color-white;
+  }
 }
 
 .policy {

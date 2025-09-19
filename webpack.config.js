@@ -34,6 +34,7 @@ module.exports = {
       // define templates here
       entry: {
         index: 'src/index.html', // => dist/index.html
+        about: 'src/about.html',
       },
       js: {
         // output filename of compiled JavaScript
