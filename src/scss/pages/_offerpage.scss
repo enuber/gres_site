@@ -1,0 +1,236 @@
+.offerPage {
+  text-align: center;
+  margin: 0 auto;
+
+  &__title {
+    color: $color-black;
+    font-size: 9rem;
+    text-transform: uppercase;
+  }
+
+  &__support {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 3rem;
+    margin: 3rem auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 140rem;
+
+    @include respond(tab-land) {
+      flex-direction: row;
+      height: 55rem;
+    }
+
+    & img {
+      width: 100%;
+      max-width: 60rem;
+      display: block;
+      height: auto;
+      object-fit: cover;
+
+      @include respond(tab-land) {
+        width: 50%;
+        max-width: unset;
+        height: 100%;
+        object-position: bottom right;
+      }
+    }
+
+    & div {
+      width: 100%;
+      max-width: 60rem;
+      text-align: left;
+
+      & ul {
+        margin-left: 1.5rem;
+        line-height: 1.25;
+
+        @include respond(phone) {
+          line-height: 0.25;
+        }
+      }
+    }
+  }
+
+  &__arttherapy {
+    margin: 3rem auto;
+    background-color: $color-primary-light;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+      gap: 3rem;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 4rem 0;
+      max-width: 140rem;
+
+      @include respond(tab-land) {
+        flex-direction: row;
+        height: 55rem;
+      }
+
+      & img {
+        width: 100%;
+        max-width: 60rem;
+        display: block;
+        height: auto;
+        object-fit: cover;
+
+        @include respond(tab-land) {
+          width: 50%;
+          max-width: unset;
+          height: 100%;
+          object-position: bottom center;
+          order: 3;
+        }
+      }
+
+      & div {
+        width: 100%;
+        max-width: 60rem;
+        text-align: left;
+
+        & ul {
+          margin-left: 1.5rem;
+          line-height: 1.25;
+
+          @include respond(phone) {
+            line-height: 0.25;
+          }
+        }
+      }
+    }
+  }
+
+  &__soundhealing {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 3rem;
+    margin: 6rem auto 3rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 140rem;
+
+    @include respond(tab-land) {
+      flex-direction: row;
+      height: 55rem;
+    }
+
+    & img {
+      width: 100%;
+      max-width: 60rem;
+      display: block;
+      height: auto;
+      object-fit: cover;
+
+      @include respond(tab-land) {
+        width: 50%;
+        max-width: unset;
+        height: 100%;
+        object-position: bottom center;
+      }
+    }
+
+    & div {
+      width: 100%;
+      max-width: 60rem;
+      text-align: left;
+    }
+  }
+
+  &__tutoring {
+    margin: 3rem auto;
+    background-color: $color-primary-light-2;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+      gap: 3rem;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 4rem 0;
+      max-width: 140rem;
+
+      @include respond(tab-land) {
+        flex-direction: row;
+        height: 55rem;
+      }
+
+      & img {
+        width: 100%;
+        max-width: 60rem;
+        display: block;
+        height: auto;
+        object-fit: cover;
+
+        @include respond(tab-land) {
+          width: 50%;
+          max-width: unset;
+          height: 100%;
+          object-position: bottom center;
+          order: 3;
+        }
+      }
+
+      & div {
+        width: 100%;
+        max-width: 60rem;
+        text-align: left;
+      }
+    }
+  }
+
+  &__holistic {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 3rem;
+    margin: 3rem auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 140rem;
+
+    @include respond(tab-land) {
+      flex-direction: row;
+      height: 55rem;
+    }
+
+    & img {
+      width: 100%;
+      max-width: 60rem;
+      display: block;
+      height: auto;
+      object-fit: cover;
+
+      @include respond(tab-land) {
+        width: 50%;
+        max-width: unset;
+        height: 100%;
+        object-position: bottom center;
+      }
+    }
+
+    & div {
+      width: 100%;
+      max-width: 60rem;
+      text-align: left;
+
+      & ul {
+        margin-left: 1.5rem;
+        line-height: 1.25;
+
+        @include respond(phone) {
+          line-height: 0.25;
+        }
+      }
+    }
+  }
+}

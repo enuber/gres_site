@@ -35,6 +35,7 @@ module.exports = {
       entry: {
         index: 'src/index.html', // => dist/index.html
         about: 'src/about.html',
+        offer: 'src/offer.html',
       },
       js: {
         // output filename of compiled JavaScript

@@ -1,8 +1,9 @@
-.about {
+.aboutPage {
   display: flex;
   flex-direction: column;
   max-width: 140rem;
   margin: 0 auto;
+  padding: 4rem 0;
 
   &__top {
     width: 95%;
