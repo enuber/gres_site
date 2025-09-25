@@ -10,6 +10,7 @@ html {
   //note: this sets font to a base 10px. Derived from 10/16=.625 * 100= 62.5%
   //means you can set font by rem so 2rem is equal to 20px;
   font-size: 50%;
+  scroll-behavior: smooth;
   @include respond(tab-port) {
     font-size: 56.25%;
   }

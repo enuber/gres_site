@@ -1,0 +1,30 @@
+.navigation {
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+  padding-top: 2rem;
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    color: $color-primary;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  &__link div:hover {
+    color: $color-black;
+  }
+
+  // Larger screen adjustments
+  @include respond(tab-port) {
+    right: 0;
+    transform: translate(0, 0);
+  }
+}
+
+.home .navigation {
+  background-color: $color-primary-light;
+}
